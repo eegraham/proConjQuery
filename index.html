@@ -4,11 +4,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link rel='stylesheet' type='text/css' href='stylesheet.css'/>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="app.js"></script>
 	</head>
-<body>
+	<body>
 		<div class="nav">
 		</div>
 
@@ -23,22 +22,26 @@
 		<div class="prosCons">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6" class="pro">
+					<div class="col-xs-6" class="pro">
 						<h3>Pros</h3>
-						<button class="addPro"><i class="fa fa-plus"></i></button>
+						<input type="text" class="proItem"></input>
+						<button class="addPro"><i class="fa fa-plus"> add a pro</i></button>
 					</div>
-					<div class="col-md-6" class="con">
+					<div class="col-xs-6" class="con">
 						<h3>Cons</h3>
-						<button class="addCon"><i class="fa fa-plus"></i></button>
+						<input type="text" class="conItem"></input>
+						<button class="addCon"><i class="fa fa-plus"> add a con</i></button>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="col-md-6">
-						<p class="pro1">add a pro!</p>
+					<div class="col-xs-6">
+						<ul class="proList">
+						</ul>
 					</div>
-					<div class="col-md-6">
-						<p class="con1">add a con!</p>
+					<div class="col-xs-6">
+						<ul class="conList">
+						</ul>
 					</div>
 				</div>
 			</div>

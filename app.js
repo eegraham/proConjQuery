@@ -1,5 +1,15 @@
 $(document).ready(function(){
 	
+	$(".proItem").keypress(function (event){
+		if (event.which == 13) {
+			var newProText = $('.proItem').val();
+			if (newProText.length > 1) {
+				AddProListItem(newProText);
+				$('.proItem').val('');
+			}
+		}
+	});
+
 	$(".addPro").click(function(){
 		var newProText = $('.proItem').val();
 		if (newProText.length > 1) {

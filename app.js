@@ -10,6 +10,16 @@ $(document).ready(function(){
 		}
 	});
 
+	$(".conItem").keypress(function (event){
+		if (event.which == 13) {
+			var newConText = $('.conItem').val();
+			if (newConText.length > 1) {
+				AddConListItem(newConText);
+				$('.conItem').val('');
+			}
+		}
+	});
+
 	$(".addPro").click(function(){
 		var newProText = $('.proItem').val();
 		if (newProText.length > 1) {

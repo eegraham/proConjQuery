@@ -36,7 +36,7 @@ $(document).ready(function(){
 		};
 	});
 
-	$(".questionInput").keypress(function (event){
+	$(document).on('keypress', '.questionInput', function (event){
 		if (event.which == 13) {
 			var newQuestionText = $(".questionInput").val();
 			if (newQuestionText.length > 1) {
@@ -53,6 +53,12 @@ $(document).ready(function(){
 	$(document).on('click', '.conDelete', function(){
 		var conToDelete = $(this).parents('.conListItem').first();
 		DeleteConListItemHTML(conToDelete);
+	});
+
+	$(document).on('click', '.startOver', function(){
+		RemoveOldQuestion();
+		var questionReset = '<h1 class="questionText">type your question here:</h1><input type="text" class="questionInput"></input>';
+		ResetQuestion(questionReset);
 	});
 
 });
@@ -82,9 +88,14 @@ function StartNewQuestion(newQuestionText){
 	$('.jumbotron').append(newQuestionHTML);
 }
 
+function RemoveOldQuestion(){
+	$('.questionHere').remove();
+	$('.startOver').remove();
+}
 
-
-
+function ResetQuestion(questionReset){
+	$('.jumbotron').append(questionReset);
+}
 
 
 

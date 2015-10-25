@@ -36,6 +36,15 @@ $(document).ready(function(){
 		};
 	});
 
+	$(".questionInput").keypress(function (event){
+		if (event.which == 13) {
+			var newQuestionText = $(".questionInput").val();
+			if (newQuestionText.length > 1) {
+				StartNewQuestion(newQuestionText);
+			}
+		}
+	});
+
 	$(document).on('click', '.proDelete', function(){
 		var proToDelete = $(this).parents('.proListItem').first();
 		DeleteProListItemHTML(proToDelete);
@@ -65,6 +74,14 @@ function DeleteProListItemHTML(proToDelete){
 function DeleteConListItemHTML(conToDelete){
 	conToDelete.remove();
 }
+
+function StartNewQuestion(newQuestionText){
+	var newQuestionHTML = '<h1 class="questionHere">'+newQuestionText+'</h1> <button class="btn btn-xl startOver">start over <i class="fa fa-refresh"></i></button>';
+	$('.questionText').remove();
+	$('.questionInput').remove();
+	$('.jumbotron').append(newQuestionHTML);
+}
+
 
 
 

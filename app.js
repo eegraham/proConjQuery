@@ -59,6 +59,8 @@ $(document).ready(function(){
 		RemoveOldQuestion();
 		var questionReset = '<h1 class="questionText">type your question here:</h1><input type="text" class="questionInput"></input>';
 		ResetQuestion(questionReset);
+		$(".proList").empty();
+		$(".conList").empty();
 	});
 
 });
